@@ -24,12 +24,16 @@ div {
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 /* Heading */
 h1 {
   font-size: 1.5rem;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   line-height: 1.4;
 }
 
@@ -44,24 +48,8 @@ h1 {
   transition: all 0.3s ease;
 }
 
-/* Download link button */
-#after-link {
-  display: inline-block;
-  padding: 12px 30px;
-  background: #3bf3f6;
-  color: #1d0fb5;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 600;
-  box-shadow: 0 0 20px #3bf3f6;
-  transition: 0.3s ease;
-}
-
-#after-link:hover {
-  background: #fff;
-  color: #1d0fb5;
-  box-shadow: 0 0 30px #fff;
-}
+/* Buttons */
+#after-link,
 #show-link {
   display: inline-block;
   padding: 12px 30px;
@@ -72,12 +60,31 @@ h1 {
   font-weight: 600;
   box-shadow: 0 0 20px #3bf3f6;
   transition: 0.3s ease;
-  left: 10px;
-  margin: 1px;
+  text-align: center;
+  margin: 5px;
 }
 
+#after-link:hover,
 #show-link:hover {
   background: #fff;
   color: #1d0fb5;
   box-shadow: 0 0 30px #fff;
+}
+
+/* Make buttons stay side by side on mobile */
+@media screen and (max-width: 480px) {
+  #after-link,
+  #show-link {
+    width: 45%; /* roughly half of container width */
+    margin: 5px 2.5%;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  #countdown {
+    font-size: 2.5rem;
+  }
+  div {
+    padding: 30px 20px;
+  }
 }
