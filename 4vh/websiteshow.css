@@ -1,0 +1,83 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Full-page layout */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1d0fb5, #606cf4);
+  color: #fff;
+  text-align: center;
+}
+
+/* Main container */
+div {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+/* Heading */
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+/* Countdown number */
+#countdown {
+  font-size: 3rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 20px;
+  color: #3bf3f6;
+  text-shadow: 0 0 10px #3bf3f6;
+  transition: all 0.3s ease;
+}
+
+/* Download link button */
+#after-link {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #3bf3f6;
+  color: #1d0fb5;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 0 20px #3bf3f6;
+  transition: 0.3s ease;
+}
+
+#after-link:hover {
+  background: #fff;
+  color: #1d0fb5;
+  box-shadow: 0 0 30px #fff;
+}
+#show-link {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #3bf3f6;
+  color: #1d0fb5;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 0 20px #3bf3f6;
+  transition: 0.3s ease;
+  left: 10px;
+  margin: 1px;
+}
+
+#show-link:hover {
+  background: #fff;
+  color: #1d0fb5;
+  box-shadow: 0 0 30px #fff;
+}
