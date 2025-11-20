@@ -1,0 +1,108 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Full-page layout */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1d0fb5, #606cf4);
+  color: #fff;
+  text-align: center;
+}
+
+/* Main container */
+div {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Heading */
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+/* Countdown number */
+#countdown {
+  font-size: 3rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 20px;
+  color: #3bf3f6;
+  text-shadow: 0 0 10px #3bf3f6;
+  transition: all 0.3s ease;
+}
+
+/* Buttons */
+#after-link,
+#show-link {
+  padding: 12px 30px;
+  background: #3bf3f6;
+  color: #1d0fb5;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 0 20px #3bf3f6;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+/* Hover effect */
+#after-link:hover,
+#show-link:hover {
+  background: #fff;
+  color: #1d0fb5;
+  box-shadow: 0 0 30px #fff;
+}
+
+/* Force buttons side by side inside container */
+div > #after-link,
+div > #show-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 480px) {
+  div {
+    padding: 30px 20px;
+  }
+  
+  #after-link,
+  #show-link {
+    flex: 1 1 45%; /* each button takes ~45% of width */
+    min-width: 120px; /* prevent too small buttons */
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  #countdown {
+    font-size: 2.5rem;
+  }
+
+  /* Keep buttons in a row */
+  div {
+    flex-wrap: wrap; /* allows buttons to stay in one row if possible */
+    justify-content: center;
+  }
+}
