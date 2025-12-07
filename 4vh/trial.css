@@ -22,6 +22,11 @@ body {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
 }
 
 h1 {
@@ -41,6 +46,12 @@ h1 {
     color: #bbbbbb;
 }
 
+.countdown {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #ff8080;
+}
+
 .btn {
     display: inline-block;
     background: #4e8cff;
@@ -54,4 +65,5 @@ h1 {
 
 .btn:hover {
     background: #2f6de6;
+    transform: scale(1.05);
 }
