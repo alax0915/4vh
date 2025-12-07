@@ -87,3 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
         return auth;
     }
 });
+
+document.addEventListener('keydown', function (e) {
+    // Check if Ctrl + Shift + I is pressed
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
+        e.preventDefault(); // Prevent default action
+        alert("Opening DevTools is disabled on this page."); // Optional message
+    }
+});
