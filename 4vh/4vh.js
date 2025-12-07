@@ -301,17 +301,33 @@ function setupLogout() {
 
 // ===== SECURITY =====
 
-document.addEventListener('contextmenu', event => event.preventDefault());
+// Disable right-click
+document.addEventListener('contextmenu', event => {
+    event.preventDefault();
+    alert("This action is disabled on this page.");
+});
 
+// Disable key combinations for DevTools
 document.addEventListener('keydown', function(event) {
-    if (
-        event.ctrlKey && (event.key === 'u' || event.key === 'U') ||
-        event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'i') ||
-        event.key === 'F12'
-    ) {
+    // Ctrl+Shift+I or Ctrl+Shift+J
+    if (event.ctrlKey && event.shiftKey && (event.key.toLowerCase() === 'i' || event.key.toLowerCase() === 'j')) {
         event.preventDefault();
+        alert("This action is disabled on this page.");
+    }
+
+    // Ctrl+U (View Source)
+    if (event.ctrlKey && event.key.toLowerCase() === 'u') {
+        event.preventDefault();
+        alert("This action is disabled on this page.");
+    }
+
+    // F12
+    if (event.key === 'F12') {
+        event.preventDefault();
+        alert("This action is disabled on this page.");
     }
 });
+
 
 // ===== INITIALIZATION =====
 
@@ -335,5 +351,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('Application initialized successfully');
 });
+
 
 // End of code
