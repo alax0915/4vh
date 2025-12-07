@@ -1369,10 +1369,12 @@ header {
 /* Cart Icon */
 .iconcart {
     position: fixed;
+    width: 35px;
+    height: 35px;
     z-index: 1000;
     cursor: pointer;
     right: 20px;
-    bottom: 20px;
+    top: 60px;
     background: white;
     border-radius: 50%;
     padding: 8px;
@@ -1455,7 +1457,7 @@ header {
 
 .hero-btn {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     justify-content: center;
     align-items: center;
@@ -1471,13 +1473,14 @@ header {
     transition: all 0.3s ease;
     text-align: center;
     font-size: 0.9rem;
-    width: 100%;
+    width: auto;
     max-width: 200px;
 }
 
 .btn-primary {
     background-color: var(--primary-color);
     color: white;
+    font-size: 0.8rem;
     border: 2px solid var(--primary-color);
 }
 
