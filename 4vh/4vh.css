@@ -1411,10 +1411,12 @@ header {
     position: fixed;
     bottom: 80px;
     right: 20px;
-    width: calc(100vw - 40px);
-    max-width: 350px;
+    width: calc(100vw - 100px);
+    max-width: 100vw;
+    height: 40vh;
     background: #fff;
     border: 1px solid #ddd;
+    overflow-y: auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #222;
     border-radius: 12px;
