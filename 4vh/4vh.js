@@ -262,7 +262,6 @@ function initSearch() {
         }
     });
 }
-
 // ===== USER AUTHENTICATION SYSTEM =====
 
 function checkAuthStatus() {
@@ -328,7 +327,6 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-
 // ===== INITIALIZATION =====
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -350,6 +348,13 @@ document.addEventListener('DOMContentLoaded', function() {
     renderCart();
     
     console.log('Application initialized successfully');
+});
+
+
+// Disable text selection
+document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+    alert("Selecting text is disabled on this page.");
 });
 
 
