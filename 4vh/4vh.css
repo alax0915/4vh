@@ -361,7 +361,7 @@ header {
     position:absolute;
     right:30px;
     top:60px;
-    width:300px;
+    width:250px;
     background: #fff; 
     border:1px solid #ddd;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -1962,3 +1962,4 @@ a:focus {
     }
 }
 }
+
